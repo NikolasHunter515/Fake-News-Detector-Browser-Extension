@@ -1,0 +1,12 @@
+{
+  "name": "fake-news-detector-browser-extension",
+  "version": "1.0.0",
+  "description": "This is the fake news browser extension project for CTP hackathon 2025.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

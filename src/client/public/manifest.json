@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "short_name": "Fake News Extension",
+  "name": "Fake News Browser Extension",
+  "version":"1.0",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "favicon.ico"
+    }
+  },
+  "host_permissions": ["<all_urls>"],
+  
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
