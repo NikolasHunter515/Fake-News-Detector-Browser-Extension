@@ -1,2 +1,3 @@
 src/python microservice/.env
 src/python microservice/__pycache__/*
+src/python microservice/tests/__pycache__/*
