@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const PORT = 5000;
 
+const analyzeWithGeminiRouter = require('./routes/routes');
+
 app.use(express.json());
+
+app.use('/analyze', analyzeWithGeminiRouter);
 
 app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from server!' });
