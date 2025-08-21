@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 5000;
 
-const analyzeWithGeminiRouter = require('./routes/routes');
+const analyzeWithGeminiRouter = require('./routes/geminiRouter');
 
 app.use(express.json());
 

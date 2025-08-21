@@ -1,9 +1,9 @@
 const express = require('express');
 const axios = require('axios');
 
-const gemini_router = express.Router();
+const geminiRouter = express.Router();
 
-router.post('/analyze', async (req, res) => {
+geminiRouter.post('/', async (req, res) => {
   try {
     const { text } = req.body;
     if (!text) {
@@ -17,4 +17,4 @@ router.post('/analyze', async (req, res) => {
   }
 });
 
-module.exports = gemini_router;
+module.exports = geminiRouter;
