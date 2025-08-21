@@ -17,6 +17,7 @@ def analyze_headline_with_gemini(text_to_analyze: str) -> str:
         prompt = f"""
         Analyze the following news article headline and determine if it is likely to be fake news.
         Provide a brief explanation for your reasoning.
+        At the end of your analysis, please make sure the last word is "fake" or "real".
 
         Article: "{text_to_analyze}"
 
