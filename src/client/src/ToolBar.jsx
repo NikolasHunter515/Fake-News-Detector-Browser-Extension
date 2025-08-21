@@ -6,6 +6,18 @@ import { useState } from 'react';
 
 //TODO change this layout, move the settings and light/dark to top of page.
 export default function ToolBar(){
+    let startVal = false;
+    if(localStorage.getItem('detectTogg')){
+        startVal = localStorage.getItem('detectTogg');
+    }
+    const [detect, setDetect] = useState(startVal);
+
+    const toggleDetect = () => {
+        setDetect(!detect);
+        localStorage.setItem('detectTogg', detect);
+        console.log(detect);
+    }
+
     return(
         <div className="justify-content-center">
             <nav className="navbar navbar-expand-sm bg-light fixed-bottom">
@@ -17,9 +29,9 @@ export default function ToolBar(){
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link">
+                            <button onClick={toggleDetect} className="nav-link">
                                 <FontAwesomeIcon icon={faPowerOff} />
-                            </a>
+                            </button>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link">
