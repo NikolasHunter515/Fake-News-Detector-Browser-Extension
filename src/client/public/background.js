@@ -1,3 +1,4 @@
+console.log('Background script loaded.');
 
 chrome.tabs.onMessage.addListener((message, sender, sendResponse) => {
   if (message === "getActiveTabUrl") {
