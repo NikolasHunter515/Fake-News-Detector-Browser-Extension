@@ -1,0 +1,6 @@
+src/python microservice/.env
+src/python microservice/__pycache__/*
+src/python microservice/tests/__pycache__/*
+
+src/server/node_modules
+src/server/node_modules/*
