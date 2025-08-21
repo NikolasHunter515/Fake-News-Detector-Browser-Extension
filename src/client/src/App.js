@@ -5,12 +5,26 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const [message, setMessage] = useState('');
+  const [headline, setHeadline] = useState('');
 
   useEffect(() => {
-    fetch('/api/hello')
-      .then(res => res.json())
-      .then(data => setMessage(data.message));
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/analyze', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ text: headline })
+        });
+        const data = await response.json();
+        setMessage(data.message);
+      } catch (err) {
+        setMessage('Error contacting backend');
+      }
+    };
+    fetchData();
+  }, [headline]);
 
   return (
     <div>
