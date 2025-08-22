@@ -1,16 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
+import { getActiveTab } from './getPageData';
 
 
 function App() {
   const [message, setMessage] = useState('');
-  const [headline, setHeadline] = useState('');
+  const [headline, setHeadline] = useState('idaho-killer-bryan-kohberger-demands-prison-transfer-after-complaining-inmate-threats');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/analyze', {
+        const response = await fetch('http://localhost:5000/analyze', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -6,17 +6,26 @@ import App from './App';
 import { getActiveTab } from './getPageData';
 import ToolBar from './ToolBar';
 import NewsLegit from './NewsLegit';
+import PageTitle from './PageTitle';
 import reportWebVitals from './reportWebVitals';
 
 //worked here.
 //console.log(getActiveTab());
 
+const title = ReactDOM.createRoot(document.getElementById('title'));
+title.render(
+  <React.StrictMode>
+    <PageTitle />
+  </React.StrictMode>
+);
+
+/*
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+);*/
 
 const menu = ReactDOM.createRoot(document.getElementById('header'));
 menu.render(
@@ -32,12 +41,13 @@ stats.render(
   </React.StrictMode>
 );
 
+/*
 const url = ReactDOM.createRoot(document.getElementById('url'));
 url.render(
   <React.StrictMode>
     <GetData />
   </React.StrictMode>
-);
+);*/
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
