@@ -3,6 +3,12 @@ from gemini_client import analyze_headline_with_gemini
 
 app = Flask(__name__)
 
+def slug_to_headline(slug: str) -> str:
+    if '.' in slug:
+        slug = slug.rsplit('.', 1)[0]
+    headline = slug.replace('-', ' ').title()
+    return headline
+
 @app.route('/analyze', methods=['POST'])
 def analyze():
     data = request.get_json()
@@ -20,9 +26,3 @@ def home():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
-
-def slug_to_headline(slug: str) -> str:
-    if '.' in slug:
-        slug = slug.rsplit('.', 1)[0]
-    headline = slug.replace('-', ' ').title()
-    return headline
