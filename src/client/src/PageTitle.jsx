@@ -11,7 +11,7 @@ export default function PageTitle(){
 
     return(
         <div>
-            <h2>{appName}</h2>
+            <h2 className='container-fluid justify-content-center d-flex'>{appName}</h2>
             <br />
             <h3>Welcome {userName},</h3>
         </div>
