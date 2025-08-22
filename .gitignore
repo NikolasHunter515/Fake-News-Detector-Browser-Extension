@@ -4,3 +4,4 @@ src/python microservice/tests/__pycache__/*
 
 src/server/node_modules
 src/server/node_modules/*
+.env
