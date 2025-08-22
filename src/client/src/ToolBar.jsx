@@ -21,7 +21,7 @@ export default function ToolBar(){
     return(
         <div className="justify-content-center">
             <nav className="navbar navbar-expand-sm bg-light fixed-bottom">
-                <div className="container-fluid">
+                <div className="container-fluid justify-content-center d-flex">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className="nav-link" href="index.html">
